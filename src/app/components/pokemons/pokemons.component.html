@@ -1,0 +1,10 @@
+<div class="w-full flex justify-center mt-4">
+  <button (click)="addPokemon()" class="px-5 py-2 bg-red-200 rounded">
+    add pokemon
+  </button>
+</div>
+<div class="grid grid-cols-2 justify-center items-center">
+  <div *ngFor="let pokemon of pokemons$ | async" class="p-4 m-4 bg-yellow-100">
+    {{ pokemon.name }}
+  </div>
+</div>
